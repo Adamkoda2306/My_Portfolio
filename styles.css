@@ -141,6 +141,15 @@ html {
     transition: .5s;
 }
 
+.btn-box a:nth-child(1) {
+    border: 2px solid white;
+    transition: .5s;
+}
+
+.btn-box a:nth-child(1):hover {
+    border: 2px solid #00abf0;
+}
+
 .btn-box a:hover {
     color: #00abf0;
 }
@@ -148,10 +157,12 @@ html {
 .btn-box a:nth-child(2) {
     background: transparent;
     color: #00abf0;
+    transition: .5s;
 }
 
 .btn-box a:nth-child(2):hover {
     color: #142544;
+    border: 2px solid white;
 }
 
 .btn-box a:nth-child(2)::before {
