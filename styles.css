@@ -29,7 +29,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* Ensure padding and border are included in width/height */
     background: linear-gradient(#0a0f27, #1e3b70, #142544);
     background-size: cover;
     background-repeat: no-repeat;
@@ -45,7 +44,6 @@ header {
     left: 0;
     width: 100%;
     z-index: 1000;
-    /* Add a background to make the text stand out */
 }
 
 #head {
@@ -78,24 +76,6 @@ header {
 #options a.active {
     color: #18ad68;
 }
-
-
-/* section {
-    padding: 0px 20px 20px 20px;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 80px;
-    min-height: 70vh;
-    scroll-snap-align: start;
-}
-
-section h2 {
-    font-family: 'Audiowide', sans-serif;
-    font-size: 2em;
-    margin-bottom: 50px;
-} */
 
 #contact {
     margin-top: 0px;
