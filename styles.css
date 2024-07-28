@@ -1,0 +1,69 @@
+@font-face {
+    font-family: 'Audiowide';
+    src: url('fonts/Audiowide-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'BlackOpsOne';
+    src: url('fonts/BlackOpsOne-Regular.ttf') format('truetype');
+    /* it can be used for larger text */
+}
+
+@font-face {
+    font-family: 'ConcertOne';
+    src: url('fonts/ConcertOne-Regular.ttf') format('truetype');
+    /* it can be used for options */
+}
+
+@font-face {
+    font-family: 'Exo2';
+    src: url('fonts/Exo2-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'MontserratAlternates';
+    src: url('fonts/MontserratAlternates-BoldItalic.ttf') format('truetype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(#0a0f27, #1e3b70, #142544);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+header {
+    padding: 10px 20px;
+    color: white;
+}
+
+#head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#options {
+    display: flex;
+    font-family: 'ConcertOne';
+    margin-top: 30px;
+    gap: 30px;
+}
+
+#head h1 {
+    margin-right: auto;
+    font-family: 'MontserratAlternates';
+    font-size: 80px;
+}
+
+#options h2 {
+    margin: 0;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+#options h2:hover {
+    color: #18ad68;
+}
