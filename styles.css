@@ -28,15 +28,24 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    /* Ensure padding and border are included in width/height */
     background: linear-gradient(#0a0f27, #1e3b70, #142544);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    scroll-margin-top: 100px;
 }
 
 header {
     padding: 10px 20px;
     color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    /* Add a background to make the text stand out */
 }
 
 #head {
@@ -45,25 +54,47 @@ header {
     justify-content: space-between;
 }
 
-#options {
+nav#options {
     display: flex;
     font-family: 'ConcertOne';
-    margin-top: 30px;
-    gap: 30px;
+    gap: 20px;
 }
 
 #head h1 {
-    margin-right: auto;
     font-family: 'MontserratAlternates';
     font-size: 80px;
 }
 
-#options h2 {
+nav#options a {
+    color: white;
+    text-decoration: none;
+    font-size: x-large;
     margin: 0;
     cursor: pointer;
     transition: color 0.3s ease;
 }
 
-#options h2:hover {
+nav#options a:hover {
     color: #18ad68;
+}
+
+section {
+    padding: 0px 20px 20px 20px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+    min-height: 70vh;
+}
+
+section h2 {
+    font-family: 'Audiowide', sans-serif;
+    font-size: 2em;
+    margin-bottom: 50px;
+}
+
+#contact {
+    margin-top: 0px;
+    min-height: 80vh;
 }
