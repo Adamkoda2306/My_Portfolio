@@ -15,7 +15,7 @@
             <h1>Portfolio</h1>
             <nav id="options">
                 <a href="#home" style="--i:1;" class="active">Home</a>
-                <a href="#education" style="--i:2;">Education</a>
+                <a href="#about" style="--i:2;">About_me</a>
                 <a href="#skills" style="--i:3;">Skills</a>
                 <a href="#projects" style="--i:4;">Projects</a>
                 <a href="#contact" style="--i:5;">Contact</a>
@@ -44,8 +44,8 @@
         </div>
     </section>
 
-    <section id="education">
-        <h2>Education</h2>
+    <section id="about">
+        <h2>About Me</h2>
     </section>
 
     <section id="skills">
@@ -59,6 +59,26 @@
     <section id="contact">
         <h2>Contact Me</h2>
     </section>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('#options a');
+
+            function changeActiveLink() {
+                let index = sections.length;
+
+                while (--index && window.scrollY + 50 < sections[index].offsetTop) {}
+
+                navLinks.forEach((link) => link.classList.remove('active'));
+                navLinks[index].classList.add('active');
+            }
+
+            changeActiveLink();
+            window.addEventListener('scroll', changeActiveLink);
+        });
+    </script>
 
 </body>
 
