@@ -58,25 +58,26 @@
 
     <section id="contact">
         <div class="contact-content">
-            <div class="contact-name">
-                <input type="text" id="name" name="name" placeholder="Enter your Name">
-            </div>
-            <div class="contact-mail">
-                <input type="email" id="email" name="email" placeholder="Enter your Email">
-            </div>
-            <div class="contact-description">
-                <textarea id="description" name="description" placeholder="Enter your Description"></textarea>
-            </div>
-            <div class="sendbtn-box">
-                <a href="#">Send Message</a>
-            </div>
-
+            <form id="contact-form" action="sendEmail.php" method="post">
+                <div class="contact-name">
+                    <input type="text" id="name" name="name" placeholder="Enter your Name" required>
+                </div>
+                <div class="contact-mail">
+                    <input type="email" id="email" name="email" placeholder="Enter your Email" required>
+                </div>
+                <div class="contact-description">
+                    <textarea id="description" name="description" placeholder="Enter your Description" required></textarea>
+                </div>
+                <div class="sendbtn-box">
+                    <button type="submit" id="send-message">Send Message</button>
+                </div>
+            </form>
         </div>
     </section>
 
-
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            // Scroll event to change active link in the navigation
             const sections = document.querySelectorAll('section');
             const navLinks = document.querySelectorAll('#options a');
 
@@ -91,6 +92,31 @@
 
             changeActiveLink();
             window.addEventListener('scroll', changeActiveLink);
+
+            // Form submission handling
+            const form = document.getElementById('contact-form');
+            const sendMessageButton = document.getElementById('send-message');
+
+            form.addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent default form submission
+
+                const formData = new FormData(form);
+
+                fetch('sendEmail.php', {
+                        method: 'POST',
+                        body: formData
+                    })
+                    .then(response => response.text())
+                    .then(result => {
+                        console.log('Email sent successfully:', result);
+                        alert('Message sent successfully!');
+                        form.reset(); // Optionally reset the form
+                    })
+                    .catch(error => {
+                        console.error('Error sending email:', error);
+                        alert('Failed to send message.');
+                    });
+            });
         });
     </script>
 

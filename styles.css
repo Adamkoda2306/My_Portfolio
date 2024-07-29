@@ -447,7 +447,7 @@ html {
     height: 50px;
 }
 
-.sendbtn-box a {
+.sendbtn-box button {
     position: relative;
     display: inline-flex;
     justify-content: center;
@@ -469,7 +469,7 @@ html {
     transition: .5s;
 }
 
-.sendbtn-box a::before {
+.sendbtn-box button::before {
     content: '';
     position: absolute;
     top: 0;
@@ -481,11 +481,11 @@ html {
     transition: .5s;
 }
 
-.sendbtn-box a:hover {
+.sendbtn-box button:hover {
     color: black;
 }
 
-.sendbtn-box a:hover::before {
+.sendbtn-box button:hover::before {
     width: 100%;
 }
 
@@ -506,6 +506,10 @@ textarea {
 
 .contact-name input:focus {
     outline: none;
+}
+
+.contact-content form {
+    background-color: transparent;
 }
 
 .contact-mail input {
