@@ -560,7 +560,7 @@ textarea {
 
 #skills .skill-content h2 {
     font-family: 'Audiowide';
-    margin-bottom: 10%;
+    margin-bottom: 2%;
     background: linear-gradient(to bottom, #e3f2fd 0%, #64b5f6 50%, #1976d2 100%);
     background-clip: text;
     color: transparent;
