@@ -123,10 +123,12 @@ html {
     font-size: 56px;
     font-family: 'Audiowide';
     font-weight: 700;
-    line-height: 1.2;
+    line-height: 1.5;
+    letter-spacing: 0.7vh;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    text-shadow: 3px 3px 0 #00abf0, -3px -3px 0 #00abf0, 3px -3px 0 #00abf0, -3px 3px 0 #00abf0;
 }
 
 .home-content h1::before {
@@ -147,8 +149,9 @@ html {
     font-size: 32px;
     font-weight: 700;
     font-family: 'Audiowide';
-    letter-spacing: 1px;
+    letter-spacing: 0.7vh;
     color: #00abf0;
+    text-shadow: 2px 2px 0 #ffffff, -2px -2px 0 #ffffff, 2px -2px 0 #ffffff, -2px 2px 0 #ffffff;
 }
 
 .home-content h3::before {
@@ -160,7 +163,7 @@ html {
     height: 100%;
     background: #0a0f27;
     opacity: 0.8;
-    animation: showRight 1s ease forwards;
+    animation: showRight_h3 3s ease infinite;
     animation-delay: 1.4s;
 }
 
@@ -679,6 +682,14 @@ textarea {
 @keyframes showRight {
     100% {
         width: 0;
+    }
+}
+
+@keyframes showRight_h3 {
+    100% {
+        width: 0;
+        opacity: 0.8;
+        background-color: #0a0f27;
     }
 }
 
