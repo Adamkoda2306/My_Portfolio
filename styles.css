@@ -16,11 +16,6 @@
 }
 
 @font-face {
-    font-family: 'Exo2';
-    src: url('fonts/Exo2-VariableFont_wght.ttf') format('truetype');
-}
-
-@font-face {
     font-family: 'MontserratAlternates';
     src: url('fonts/MontserratAlternates-BoldItalic.ttf') format('truetype');
 }
@@ -172,6 +167,7 @@ body {
 .home-content p {
     position: relative;
     font-size: 16px;
+    font-family: 'ConcertOne';
     margin: 20px 0 40px;
 }
 
@@ -221,6 +217,7 @@ body {
     border: 2px solid #00abf0;
     border-radius: 8px;
     font-size: 19px;
+    font-family: 'ConcertOne';
     color: #0a0f27;
     text-decoration: none;
     font-weight: 600;
@@ -367,13 +364,6 @@ body {
 
 .home-sci a:hover::before {
     width: 100%;
-}
-
-#projects {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    padding: 0 10%;
 }
 
 #contact {
@@ -782,6 +772,13 @@ textarea {
     text-decoration: none;
     font-weight: 600;
     letter-spacing: 1px;
+}
+
+#projects {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
 }
 
 
