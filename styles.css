@@ -4,12 +4,6 @@
 }
 
 @font-face {
-    font-family: 'BlackOpsOne';
-    src: url('fonts/BlackOpsOne-Regular.ttf') format('truetype');
-    /* it can be used for larger text */
-}
-
-@font-face {
     font-family: 'ConcertOne';
     src: url('fonts/ConcertOne-Regular.ttf') format('truetype');
     /* it can be used for options */
@@ -781,6 +775,118 @@ textarea {
     padding: 0 10%;
 }
 
+.project-content {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.project-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #0a0f27;
+    opacity: 0.8;
+    animation: showRight 1s ease forwards;
+    animation-delay: .4s;
+}
+
+.project-content h2 {
+    margin-bottom: 5vh;
+    background: linear-gradient(to bottom, #e3f2fd 0%, #64b5f6 50%, #1976d2 100%);
+    background-clip: text;
+    color: transparent;
+    font-size: 10vh;
+    font-family: 'Audiowide';
+}
+
+.project-box {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.project {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: url('cse_login.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 3px solid #00abf0;
+    box-shadow: 8px 4px 8px white;
+    border-radius: 30px;
+    height: 50vh;
+    width: 40vh;
+    overflow: hidden;
+    transition: transform 0.5s ease-out;
+    transform: scale(1);
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: calc(.4s * var(--i));
+}
+
+.project h2,
+.project h3 {
+    background-color: transparent;
+    color: transparent;
+    opacity: 0;
+    font-size: 30px;
+    font-family: 'ConcertOne';
+    transition: color 0.3s;
+}
+
+.project a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    color: transparent;
+    margin-top: 25vh;
+    text-decoration: none;
+    height: 6vh;
+    width: 30vh;
+    border: 5px solid transparent;
+    font-weight: 200;
+    font-family: 'ConcertOne';
+    border-radius: 20px;
+    opacity: 0;
+}
+
+.project::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0a0f27;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+}
+
+.project:hover::before {
+    opacity: 0.8;
+}
+
+.project:hover>h2,
+.project:hover>h3 {
+    color: #ffffff;
+    opacity: 1;
+}
+
+.project:hover>a {
+    color: white;
+    border-color: white;
+    opacity: 1;
+}
+
 
 /* KEYFRAMES ANIMATIONS */
 
@@ -818,5 +924,14 @@ textarea {
     }
     100% {
         transform: translateY(0);
+    }
+}
+
+@keyframes popOut {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.1);
     }
 }
