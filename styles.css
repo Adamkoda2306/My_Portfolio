@@ -815,7 +815,7 @@ textarea {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background: url('cse_login.png');
+    background: url('images/cse_login.png');
     background-repeat: no-repeat;
     background-size: cover;
     border: 3px solid #00abf0;
